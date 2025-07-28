@@ -1,0 +1,24 @@
+[project]
+name = "pyspark-classic-application"
+version = "1.0.0"
+description = "A sample PySpark application"
+authors = [
+    {name = "Rahul Goyal", email = "you@example.com"}
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "pyspark[connect]==4.0.0" # sparkconnect dependencies
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyspark==4.0.0"
+]
+
+[tool.setuptools]
+packages = ["classic_application", "sparkconnect_application"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
